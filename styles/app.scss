@@ -1,19 +1,57 @@
 // @import 'yoga';
 // @import 'normalize';
-
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
-// aside{
+@import 'left-side'; // aside{
 //   border: black 1px solid;
 //   display: flex;
 //   flex-direction: column;
 //   width: 25%;
 //
 // }
-.container {
-  &-inner{
+body{
+  font-family: sans-serif;
+}
+body,h1,h2,h3,p {
+  margin: 0;
+}
 
+.top-nav__title {
+  background: yellow;
+
+}
+
+.container {
+  background: red;
+
+  &-inner {
+background: pink;
+margin: auto;
+    max-width: 60rem;
+    display: flex;
+
+}
+}
+.main{
+  &-middle{
+  // display: flex;
+  // flex-direction: column;
+  }
+}
+
+
+.component{
+  margin-top:1rem;
+&-title{
+}
+
+&-list{
+
+  border: yellow 1px solid;
+  display: flex;
+  &__item{
 
   }
+}
 }
