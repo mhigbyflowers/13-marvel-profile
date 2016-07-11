@@ -6,12 +6,15 @@
   <link rel="stylesheet" href="/app.css">
 </head>
 <body>
-  <h1 class="top-nav__title">
-    Marvel
-  </h1>
-
-<div class="container">
-  <div class="container-inner">
+  <div class="container-top">
+    <div class="container-top-inner">
+      <h1 class="container-top-title">
+        Marvel
+      </h1>
+    </div>
+  </div>
+      <div class="container">
+        <div class="container-inner">
 <aside class="series-details">
 <div class="series-details__cover">
 <img class="series-details__cover-img"  src="http://placehold.it/200" alt="" class="series-details__cover-img">
@@ -32,42 +35,42 @@
     <div class="component">
       <h1 class="component-title">components</h1>
       <div class="component-list">
-        <div class="component-list-item">
-          <img class="component.list__item-img" src="http://placehold.it/100">
-          <p class="component.list__item-title">name of comic (name name)</p>
+        <div class="component-list__item">
+          <div class="component-list__item-img"><img  src="http://placehold.it/100"></div>
+          <p class="component-list__item-title">name of comic (name name)</p>
         </div>
-        <div class="component-list-item">
-          <img class="component.list__item-img" src="http://placehold.it/100">
-          <p class="component.list__item-title">name of comic (name name)</p>
+        <div class="component-list__item">
+          <div class="component-list__item-img"><img  src="http://placehold.it/100"></div>
+          <p class="component-list__item-title">name of comic (name name)</p>
         </div>
-        <div class="component-list-item">
-          <img class="component.list__item-img" src="http://placehold.it/100">
-          <p class="component.list__item-title">name of comic (name name)</p>
+        <div class="component-list__item">
+          <div class="component-list__item-img"><img  src="http://placehold.it/100"></div>
+          <p class="component-list__item-title">name of comic (name name)</p>
         </div>
-        <div class="component-list-item">
-          <img class="component.list__item-img" src="http://placehold.it/100">
-          <p class="component.list__item-title">name of comic (name name)</p>
+        <div class="component-list__item">
+          <div class="component-list__item-img"><img  src="http://placehold.it/100"></div>
+          <p class="component-list__item-title">name of comic (name name)</p>
         </div>
       </div>
 
       <div class="component">
         <h1 class="component-title">components</h1>
         <div class="component-list">
-          <div class="component-list-item">
-            <img class="component.list__item-img" src="http://placehold.it/100">
-            <p class="component.list__item-title">name of comic (name name)</p>
+          <div class="component-list__item">
+            <div class="component-list__item-img"><img  src="http://placehold.it/100"></div>
+            <p class="component-list__item-title">name of comic (name name)</p>
           </div>
-          <div class="component-list-item">
-            <img class="component.list__item-img" src="http://placehold.it/100">
-            <p class="component.list__item-title">name of comic (name name)</p>
+          <div class="component-list__item">
+            <div class="component-list__item-img"><img  src="http://placehold.it/100"></div>
+            <p class="component-list__item-title">name of comic (name name)</p>
           </div>
-          <div class="component-list-item">
-            <img class="component.list__item-img" src="http://placehold.it/100">
-            <p class="component.list__item-title">name of comic (name name)</p>
+          <div class="component-list__item">
+            <div class="component-list__item-img"><img  src="http://placehold.it/100"></div>
+            <p class="component-list__item-title">name of comic (name name)</p>
           </div>
-          <div class="component-list-item">
-            <img class="component.list__item-img" src="http://placehold.it/100">
-            <p class="component.list__item-title">name of comic (name name)</p>
+          <div class="component-list__item">
+            <div class="component-list__item-img"><img  src="http://placehold.it/100"></div>
+            <p class="component-list__item-title">name of comic (name name)</p>
           </div>
         </div>
 
@@ -82,6 +85,10 @@
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
+    var app = require('get-data');
+var elm = document.querySelector('.series-details');
+   app(elm);
+
   </script>
 </body>
 </html>
