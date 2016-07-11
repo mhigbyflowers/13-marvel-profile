@@ -4,8 +4,9 @@ export default function lookUp(){
     .then((res) => res.json())
     .then((stuff) => {
 var elm = document.querySelector('.series-details');
+console.log(stuff);
 
-console.log(stuff.data.results[0].creators.items);
+// console.log(stuff.data.results[0].creators.items);
 elm.innerHTML= "  ";
 elm.innerHTML=`
 
@@ -19,9 +20,19 @@ elm.innerHTML=`
 <div class="series-details__creators">
 `;
 
+// var creatorsItem = document.createElement('p');
+ var creatorsItemParent = document.querySelector('.series-details__creators');
+
+// creatorsItem.classList = "series-details__creators-item";
 for (var i = 0; i < stuff.data.results[0].creators.items.length; i++) {
-console.log(stuff.data.results[0].creators.items[i].name);
+  console.log(stuff.data.results[0].creators.items[i].name);
+
+ var elm = document.createElement('p');
+ elm.innerText=stuff.data.results[0].creators.items[i].name;
+ creatorsItemParent.appendChild(elm);
+// console.log(elm);
 }
+
 
 // <p class="series-details__creators-item">Tom</p>
 // <p class="series-details__creators-item">Mike</p>
@@ -31,5 +42,5 @@ console.log(stuff.data.results[0].creators.items[i].name);
 // <p class="series-details__creators-item">Paul</p>
 
     });
-    console.log(elm);
+    // console.log(elm);
 }
