@@ -25,16 +25,20 @@ background: green;
       background: green;
       max-width: 60rem;
 
+
+    }
+    &-title{
+      margin-left: 1rem;
     }
 
 
 }
 
 .container {
-  background: red;
+  // background: red;
 
   &-inner {
-background: pink;
+// background: pink;
 margin: auto;
     max-width: 60rem;
     display: flex;
