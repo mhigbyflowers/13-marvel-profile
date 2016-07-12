@@ -16,7 +16,7 @@ export default class SeriesInfoView {
 
     var date = this.element.querySelector('.series-details__date');
     date.innerText = `${this.data.data.results[0].startYear} - ${this.data.data.results[0].endYear}`;
-    console.log(this.data.data.results[0].startYear);
+    // console.log(this.data.data.results[0].startYear);
 
 
 
@@ -29,7 +29,7 @@ export default class SeriesInfoView {
       creatorsList.appendChild(item);
 
     }
-    console.log(creatorsList);
+    // console.log(creatorsList);
   };
 
 }
