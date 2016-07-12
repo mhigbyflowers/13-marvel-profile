@@ -2,8 +2,8 @@
   display: flex;
 margin: 1rem;
   flex-direction: column;
-  background: white;
-  width: 30%;
+
+  min-width: 15rem;
 
   &__cover{
 

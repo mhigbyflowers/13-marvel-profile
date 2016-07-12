@@ -2,17 +2,18 @@ export default class CharacterListView {
   constructor(element, data) {
 
     this.element = element.querySelector('.char');
-    this.data = data.data.results[0];
+    this.data = data.data;
+
 
   }
 
   render() {
     this.element.innerHTML = ' ';
 
-    this.data.characters.items.forEach((characters) => {
+    this.data.results.forEach((characters) => {
       var img = document.createElement('img');
       img.classList = 'component-list__item-img';
-      img.src = characters.resourceURI + '.jpg';
+      img.src = characters.thumbnail.path + '.jpg';
 
       var title = document.createElement('p');
       title.classList = 'component-list__item-title';

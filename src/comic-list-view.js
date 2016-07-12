@@ -2,28 +2,33 @@ export default class ComicListView {
   constructor(element, data) {
 
     this.element = element.querySelector('.comic');
-    this.data = data.data.results[0];
+    this.data = data.data;
 console.log(this.data);
   }
   render(){
     this.element.innerHTML = ' ';
 
-    this.data.comics.items.forEach((comics) => {
+    this.data.results.forEach((comics) => {
       var img = document.createElement('img');
       img.classList = 'component-list__item-img';
 
-      img.src = comics.resourceURI + '.jpg';
+      img.src = comics.thumbnail.path + '.jpg';
 
       var title = document.createElement('p');
       title.classList = 'component-list__item-title';
 
       var item = document.createElement('div');
       item.classList = 'component-list__item';
-      title.innerText = comics.name;
+      title.innerText = comics.title;
+
+      var showMore = document.createElement('button');
+      showMore.innerText = 'Show Moar'
+      showMore.classList ='show-more-btn';
 
       this.element.appendChild(item);
       item.appendChild(img);
       item.appendChild(title);
+      item.appendChild(showMore);
       // console.log(characters.name);
 
     });
