@@ -14,6 +14,8 @@ export default class ComicListView {
   render(){
 
     this.data.results.forEach((comics) => {
+      var imgFrame = document.createElement('div');
+      imgFrame.classList='image-frame';
       var img = document.createElement('img');
       img.classList = 'component-list__item-img';
 
@@ -31,22 +33,23 @@ export default class ComicListView {
       showMore.classList ='show-more-btn';
 
       this.element.appendChild(item);
-      item.appendChild(img);
+      imgFrame.appendChild(img);
+      item.appendChild(imgFrame);
       item.appendChild(title);
       item.appendChild(showMore);
       // console.log(characters.name);
       showMore.addEventListener('click', ()=>
       {
-        console.log(comics.description);
+
         this.infoTex.innerText = comics.description;
-        this.displayCard.classList.toggle('hidden');
-        // this.displayCard.classList.add('.active');
-    console.log(this.displayCard);
+        this.displayCard.classList.add('active');
       })
       this.close.addEventListener('click',()=>{
-        console.log('clikker');
-          this.displayCard.classList.remove('hidden');
+          this.displayCard.classList.remove('active');
       })
+
+
+
 
     });
 

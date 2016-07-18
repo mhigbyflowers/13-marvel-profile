@@ -11,6 +11,8 @@ export default class CharacterListView {
     this.element.innerHTML = ' ';
 
     this.data.results.forEach((characters) => {
+      var imgFrame = document.createElement('div');
+      imgFrame.classList = 'image-frame';
       var img = document.createElement('img');
       img.classList = 'component-list__item-img';
       img.src = characters.thumbnail.path + '.jpg';
@@ -23,7 +25,8 @@ export default class CharacterListView {
       title.innerText = characters.name;
 
       this.element.appendChild(item);
-      item.appendChild(img);
+      imgFrame.appendChild(img);
+      item.appendChild(imgFrame);
       item.appendChild(title);
       // console.log(characters.name);
 

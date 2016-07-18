@@ -6,10 +6,14 @@ margin: 1rem;
   min-width: 15rem;
 
   &__cover{
-
+    width: 15rem;
+    height: 15rem;
+    overflow: hidden;
 
     &-img{
+transform: translateY(-22%);
       width: 100%;
+
     }
   }
 
@@ -25,11 +29,11 @@ margin: 1rem;
 &__creators{
   /*margin-top: 1rem;*/
   &-title{
-    border-bottom: .3rem grey solid;
+    border-bottom: .3rem #aaa solid;
     margin-bottom: .5rem;
   }
   &-item{
-    font-size: .6rem;
+    font-size: .8rem;
     margin-top: .4rem;
   }
 }
