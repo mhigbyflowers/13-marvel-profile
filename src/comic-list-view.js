@@ -3,11 +3,15 @@ export default class ComicListView {
 
     this.element = element.querySelector('.comic');
     this.data = data.data;
+    this.element.innerHTML = ' ';
+    this.displayCard = element.querySelector('.overlay');
+    this.infoTex = element.querySelector('.overlay__card-text');
+    this.close = element.querySelector('.overlay__card-x')
+    console.log(this.displayCard);
 
-console.log(this.data);
+// console.log(this.data);
   }
   render(){
-    this.element.innerHTML = ' ';
 
     this.data.results.forEach((comics) => {
       var img = document.createElement('img');
@@ -33,14 +37,17 @@ console.log(this.data);
       // console.log(characters.name);
       showMore.addEventListener('click', ()=>
       {
-        var displayCard = this.element.querySelector('.overlay');
-        // var infoTex = this.element.querySelector('.overlay__card-text');
         console.log(comics.description);
-        // infoTex.innerText = comics.description;
-        displayCard.classList.remove('.hidden');
-        displayCard.classList.add('.active');
-
+        this.infoTex.innerText = comics.description;
+        this.displayCard.classList.toggle('hidden');
+        // this.displayCard.classList.add('.active');
+    console.log(this.displayCard);
       })
+      this.close.addEventListener('click',()=>{
+        console.log('clikker');
+          this.displayCard.classList.remove('hidden');
+      })
+
     });
 
 
