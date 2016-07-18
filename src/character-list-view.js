@@ -27,7 +27,11 @@ export default class CharacterListView {
       item.appendChild(title);
       // console.log(characters.name);
 
+
+
     });
+
+
 
     // console.log(this.data);
 

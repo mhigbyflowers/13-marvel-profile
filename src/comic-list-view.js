@@ -3,6 +3,7 @@ export default class ComicListView {
 
     this.element = element.querySelector('.comic');
     this.data = data.data;
+
 console.log(this.data);
   }
   render(){
@@ -30,8 +31,23 @@ console.log(this.data);
       item.appendChild(title);
       item.appendChild(showMore);
       // console.log(characters.name);
+      showMore.addEventListener('click', ()=>
+      {
+        var displayCard = this.element.querySelector('.overlay');
+        // var infoTex = this.element.querySelector('.overlay__card-text');
+        console.log(comics.description);
+        // infoTex.innerText = comics.description;
+        displayCard.classList.remove('.hidden');
+        displayCard.classList.add('.active');
 
+      })
     });
+
+
+  // console.log('ckick');
+
+
+
 
 
   }
